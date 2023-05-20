@@ -16,6 +16,7 @@ class PostImagesController < ApplicationController
 
   def show
     @post_image = PostImage.find(params[:id])
+    @post_comment = PostComment.new
   end
   
   def destroy
@@ -23,6 +24,7 @@ class PostImagesController < ApplicationController
     post_image.delete
     redirect_to post_images
   end
+  
   
   private
   
